@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "L7O5FuJFe1TWMvezuv16QPL1u+7erWLy2gnBxR+khmSV//RUY+K7OH4/yadSiTpS6jBFO9v6CxK0/jSEnsLL8g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Martinez\\Documents\\Web\\Taller - 1404\\Datos\\Datos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Martinez\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Martinez\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

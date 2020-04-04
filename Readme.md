@@ -9,3 +9,5 @@
 0.2.2 [Funcionalidad] - "Se creo la clase UsuarioService"
 
 0.2.3 [Funcionalidad] - "Se termino e implemento la clase service"
+
+0.3.0 [Fincionalidad] - "Se crearon y se agregaron las capas a la solucion"
