@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../../services/usuario.service';
+import { Usuario } from '../modelos/Usuario';
 
 @Component({
   selector: 'app-formulario',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
 
-  constructor() { }
+  usuario: Usuario;
 
-  ngOnInit() {
+  constructor(private _usuarioService: UsuarioService) {
+    this.usuario = new Usuario();
+   }
+
+  ngOnInit() {}
+
+  agregarUsuario() {
+    this._usuarioService.post(this.usuario);
   }
-
 }

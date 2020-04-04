@@ -1,21 +1,19 @@
 <div class="container fadeIn animated" style="max-width: 7cm; margin-top: 1cm;">
-    <form>
-        <div class="form-group">
-            <label for="formGroupExampleInput">Identificacion</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe tu identificacion">
-        </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Nombre</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Escribe tu nombre">
-        </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Salario</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingresa el salario">
-        </div>
-        <div class="form-group">
-            <label for="formGroupExampleInput2">Costo de servicio</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingresa el costo">
-        </div>
-        <button class="btn btn-outline-primary btn-block" [routerLink]="['/consulta']">Facturar</button>
-    </form>
+    <div class="form-group">
+        <label for="formGroupExampleInput">Identificacion</label>
+        <input type="text" class="form-control" [(ngModel)]="usuario.identificacion" placeholder="Escribe tu identificacion" #identificacion>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="usuario.nombre" placeholder="Escribe tu nombre" #nombre>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Salario</label>
+        <input type="text" class="form-control" [(ngModel)]="usuario.salario" placeholder="Ingresa el salario" #salario>
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Costo de servicio</label>
+        <input type="text" class="form-control" [(ngModel)]="usuario.costo" placeholder="Ingresa el costo" #costo>
+    </div>
+    <button (click)="agregarUsuario()" class="btn btn-outline-primary btn-block" [routerLink]="['/consulta']">Facturar</button>
 </div>
