@@ -7,3 +7,5 @@
 0.2.1 [Funcionalidad] - "Se empezaro los controladores"
 
 0.2.2 [Funcionalidad] - "Se creo la clase UsuarioService"
+
+0.2.3 [Funcionalidad] - "Se termino e implemento la clase service"
