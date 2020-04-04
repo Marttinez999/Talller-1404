@@ -13,8 +13,5 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   
   }
-  buscarRegistro(id: number) {
-    this.route.navigate('/consulta');
-  }
 
 }
