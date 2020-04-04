@@ -1,1 +1,17 @@
-<p>formulario works!</p>
+<div class="container fadeIn animated" style="max-width: 7cm; margin-top: 1cm;">
+    <form>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Identificacion</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe tu identificacion">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Nombre</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Escribe tu nombre">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Salario</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingresa el salario">
+        </div>
+        <button class="btn btn-outline-success btn-block" [routerLink]="['/consulta']">Facturar</button>
+    </form>
+</div>
