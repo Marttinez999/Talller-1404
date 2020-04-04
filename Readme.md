@@ -1,3 +1,5 @@
+#Versiones
+
 0.0.0 [Proyecto en blanco] - "Proyecto creado y funcional"
 
 0.1.0 [Diseño] - "Se agrego una navbar y se enruto: inicio, consulta y formulario de registro"
@@ -10,4 +12,6 @@
 
 0.2.3 [Funcionalidad] - "Se termino e implemento la clase service"
 
-0.3.0 [Fincionalidad] - "Se crearon y se agregaron las capas a la solucion"
+0.3.0 [Funcionalidad] - "Se crearon y se agregaron las capas a la solucion"
+
+0.3.1 [Maquetacion] - "Creada la clase usuario y referencias agregadas"
