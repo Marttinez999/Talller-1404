@@ -1,5 +1,5 @@
 using Entity;
-
+using Logica;
 namespace GUI.Models
 {
     public class UsuarioInputModel{
@@ -8,11 +8,11 @@ namespace GUI.Models
         public double salario { get; set; }
         public double costo { get; set; }
     }
-    public class PersonaViewModel: UsuarioInputModel
+    public class UsuarioViewModel: UsuarioInputModel
     {
-        public PersonaViewModel(){}
-
-        public PersonaViewModel(Usuario usuario)
+        public UsuarioViewModel()
+        {}
+        public UsuarioViewModel(Usuario usuario)
         {
             usuario.identificacion = identificacion;
             usuario.nombre = nombre;

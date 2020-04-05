@@ -15,3 +15,5 @@
 0.3.0 [Funcionalidad] - "Se crearon y se agregaron las capas a la solucion"
 
 0.3.1 [Maquetacion] - "Creada la clase usuario y referencias agregadas"
+
+0.3.2 [Maquetacion] - "Se termino la clase controller, modelos, clases dependientes"
