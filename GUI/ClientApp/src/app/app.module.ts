@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { APP_ROUTING } from './app.routes';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ConsultaComponent } from './components/consulta/consulta.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,12 @@ import { ConsultaComponent } from './components/consulta/consulta.component';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    APP_ROUTING
+    RouterModule.forRoot([
+      {path: '', component: HomeComponent, pathMatch: 'full'},
+      { path: 'formulario', component: FormularioComponent },
+      { path: 'inicio', component: HomeComponent },
+      { path: 'consulta', component: ConsultaComponent },
+    ])
   ],
   providers: [
   ],

@@ -19,3 +19,5 @@
 0.3.2 [Maquetacion] - "Se termino la clase controller, modelos, clases dependientes"
 
 1.0.0 [Funcionalidad] - "Se termino la app pero no ha sido probada"
+
+1.0.1 [Funcionalidad] - "La app no corria, asi que se cambio el enrutamiento"
