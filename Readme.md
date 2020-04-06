@@ -17,3 +17,5 @@
 0.3.1 [Maquetacion] - "Creada la clase usuario y referencias agregadas"
 
 0.3.2 [Maquetacion] - "Se termino la clase controller, modelos, clases dependientes"
+
+1.0.0 [Funcionalidad] - "Se termino la app pero no ha sido probada"

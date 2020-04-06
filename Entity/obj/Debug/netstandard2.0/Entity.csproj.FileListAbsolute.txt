@@ -1,0 +1,9 @@
+C:\Users\Martinez\Documents\Web\Taller - 1404\Entity\bin\Debug\netstandard2.0\Entity.deps.json
+C:\Users\Martinez\Documents\Web\Taller - 1404\Entity\bin\Debug\netstandard2.0\Entity.dll
+C:\Users\Martinez\Documents\Web\Taller - 1404\Entity\bin\Debug\netstandard2.0\Entity.pdb
+C:\Users\Martinez\Documents\Web\Taller - 1404\Entity\obj\Debug\netstandard2.0\Entity.csprojAssemblyReference.cache
+C:\Users\Martinez\Documents\Web\Taller - 1404\Entity\obj\Debug\netstandard2.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\Martinez\Documents\Web\Taller - 1404\Entity\obj\Debug\netstandard2.0\Entity.AssemblyInfoInputs.cache
+C:\Users\Martinez\Documents\Web\Taller - 1404\Entity\obj\Debug\netstandard2.0\Entity.AssemblyInfo.cs
+C:\Users\Martinez\Documents\Web\Taller - 1404\Entity\obj\Debug\netstandard2.0\Entity.dll
+C:\Users\Martinez\Documents\Web\Taller - 1404\Entity\obj\Debug\netstandard2.0\Entity.pdb

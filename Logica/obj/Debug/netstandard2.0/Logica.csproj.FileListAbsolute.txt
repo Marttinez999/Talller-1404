@@ -1,0 +1,14 @@
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\bin\Debug\netstandard2.0\Logica.deps.json
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\bin\Debug\netstandard2.0\Logica.dll
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\bin\Debug\netstandard2.0\Logica.pdb
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\bin\Debug\netstandard2.0\Datos.dll
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\bin\Debug\netstandard2.0\Entity.dll
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\bin\Debug\netstandard2.0\Entity.pdb
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\bin\Debug\netstandard2.0\Datos.pdb
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\obj\Debug\netstandard2.0\Logica.csprojAssemblyReference.cache
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\obj\Debug\netstandard2.0\Logica.csproj.CoreCompileInputs.cache
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\obj\Debug\netstandard2.0\Logica.AssemblyInfoInputs.cache
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\obj\Debug\netstandard2.0\Logica.AssemblyInfo.cs
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\obj\Debug\netstandard2.0\Logica.csproj.CopyComplete
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\obj\Debug\netstandard2.0\Logica.dll
+C:\Users\Martinez\Documents\Web\Taller - 1404\Logica\obj\Debug\netstandard2.0\Logica.pdb

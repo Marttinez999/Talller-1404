@@ -11,10 +11,8 @@ using GUI.Models;
 
 namespace GUI.Controllers
 {
-
    [Route("api/[controller]")]
    [ApiController]
-
    public class UsuarioController: ControllerBase
    {
        private readonly UsuarioService _usuarioService;
@@ -22,16 +20,18 @@ namespace GUI.Controllers
 
        public UsuarioController(IConfiguration configuration){
            Configuration = configuration;
+           string connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+           _usuarioService = new UsuarioService(connectionString);
        }
 
       [HttpGet]
-      public IEnumerable<UsuarioViewModel> get() {
+      public IEnumerable<UsuarioViewModel> Get() {
           var usuarios = _usuarioService.consultarTodos().Select(u => new UsuarioViewModel(u));
           return usuarios;
       }
       
-      [HttpPost]
-      public ActionResult<UsuarioViewModel> post(UsuarioInputModel usuarioInput) {
+      [HttpPost("usuarioImput")]
+      public ActionResult<UsuarioViewModel> Post(UsuarioInputModel usuarioInput) {
           Usuario usuario = mapearUsuario(usuarioInput);
           var respuesta = _usuarioService.guardar(usuario);
           if (respuesta.Error)
@@ -42,13 +42,13 @@ namespace GUI.Controllers
       }
       
       [HttpDelete("id")]
-      public ActionResult<string> delete(string id) {
+      public ActionResult<string> Delete(string id) {
           string mensaje = _usuarioService.eliminar(id);
           return Ok(mensaje);
       }
       
       [HttpPut("id")]
-      public ActionResult<string> put(string id) {
+        public ActionResult<string> Put(string id) {
           throw new NotImplementedException();
       }
       private Usuario mapearUsuario(UsuarioInputModel usuarioInput){
