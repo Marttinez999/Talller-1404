@@ -30,8 +30,9 @@ namespace GUI.Controllers
           return usuarios;
       }
       
-      [HttpPost("usuarioImput")]
+      [HttpPost]
       public ActionResult<UsuarioViewModel> Post(UsuarioInputModel usuarioInput) {
+          
           Usuario usuario = mapearUsuario(usuarioInput);
           var respuesta = _usuarioService.guardar(usuario);
           if (respuesta.Error)
@@ -58,6 +59,7 @@ namespace GUI.Controllers
           usuario.salario = usuarioInput.salario;
           usuario.costo = usuarioInput.costo;
 
+          System.Console.WriteLine(usuario.nombre);
           return usuario;
       }
     }

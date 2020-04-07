@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Entity;
 using System.Data.SqlClient;
+using System;
 
 namespace Datos
 {
@@ -11,6 +12,7 @@ namespace Datos
 
     public UsuarioRepository(ConnectionManager cadena)
     {
+        usuarios = new List<Usuario>();
         _conexion = cadena._conexion;
     }
     public void Guardar(Usuario usuario) {

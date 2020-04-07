@@ -11,9 +11,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="">
-                <!-- <th scope="row">{{ i+1 }}</th> -->
-                <!-- <td>{{ persona.identificacion }}</td> -->
+            <tr *ngFor="let usuario of usuarios;let i = index">
+                <th scope="row">{{ i+1 }}</th>
+                <td>{{ usuario.identificacion }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.salario }}</td>
+                <td>{{ usuario.costo }}</td>
+                <td>{{ usuario.copago }}</td>
             </tr>
         </tbody>
     </table>

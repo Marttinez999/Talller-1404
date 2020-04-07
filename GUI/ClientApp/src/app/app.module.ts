@@ -25,7 +25,7 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       {path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'formulario', component: FormularioComponent },
-      { path: 'inicio', component: HomeComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'consulta', component: ConsultaComponent },
     ])
   ],

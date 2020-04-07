@@ -14,10 +14,12 @@ namespace GUI.Models
         {}
         public UsuarioViewModel(Usuario usuario)
         {
-            usuario.identificacion = identificacion;
-            usuario.nombre = nombre;
-            usuario.salario = salario;
-            usuario.costo = costo;
+
+            identificacion = usuario.identificacion;
+            nombre = usuario.nombre;
+            salario = usuario.salario;
+            costo = usuario.costo;
+            copago = usuario.copago;
         }
         public double copago { get; set; }
     }

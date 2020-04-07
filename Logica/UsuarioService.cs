@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Resources;
+using System;
 using Entity;
 using System.Collections.Generic;
 using Datos;
@@ -14,8 +15,10 @@ namespace Logica
            usuarioRepository = new UsuarioRepository(_conexion);
        }
         public List<Usuario> consultarTodos() {
+            List<Usuario> usuarios = new List<Usuario>();
+
             _conexion.open();
-            List<Usuario> usuarios = usuarioRepository.ConsultarTodos();
+            usuarios = usuarioRepository.ConsultarTodos();
             _conexion.close();
 
             return usuarios;
@@ -24,6 +27,7 @@ namespace Logica
             try
             {
                 usuario.calcularCopago();
+                System.Console.WriteLine(usuario.identificacion);
                 _conexion.open();
                 usuarioRepository.Guardar(usuario);
                 _conexion.close();
