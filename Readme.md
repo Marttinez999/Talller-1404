@@ -21,3 +21,7 @@
 1.0.0 [Funcionalidad] - "Se termino la app pero no ha sido probada"
 
 1.0.1 [Funcionalidad] - "La app no corria, asi que se cambio el enrutamiento"
+
+1.1.0 [BugFix] - "La app no traia datos"
+
+1.2.0 [Funcionalidad] - "Se agrego los modulos reactivos"

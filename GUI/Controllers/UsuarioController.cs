@@ -30,7 +30,7 @@ namespace GUI.Controllers
           return usuarios;
       }
       
-      [HttpPost]
+      [HttpPost("")]
       public ActionResult<UsuarioViewModel> Post(UsuarioInputModel usuarioInput) {
           
           Usuario usuario = mapearUsuario(usuarioInput);
