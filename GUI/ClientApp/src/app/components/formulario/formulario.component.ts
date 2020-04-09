@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 import { Usuario } from '../modelos/Usuario';
-import { FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-formulario',
@@ -9,6 +9,10 @@ import { FormGroup, FormBuilder, Validators, AbstractControl} from '@angular/for
   styles: []
 })
 export class FormularioComponent implements OnInit {
+
+  get control() {
+    return this.formGroup.controls;
+  }
 
   usuario: Usuario;
   formGroup: FormGroup;
@@ -21,22 +25,21 @@ export class FormularioComponent implements OnInit {
     this.buildForm();
   }
   private buildForm() {
-    this.usuario = new Usuario();
-    this.usuario.identificacion = '';
-    this.usuario.nombre = '';
-    this.usuario.costo = 0;
-    this.usuario.copago = 0;
-    this.usuario.salario = 0;
 
     this.formGroup = this.formBuilder.group({
-      identificacion: [this.usuario.identificacion, Validators.required],
-      nombre: [this.usuario.nombre, Validators.required],
-      costo: [this.usuario.costo, Validators.required, Validators.min(1)],
-      salario: [this.usuario.salario, Validators.required, Validators.min(1)]
+
+      id: ['', Validators.required],
+      nombre: ['', Validators.required],
+      salario: [0, [Validators.required, Validators.min(1)]],
+      costo: [0, [Validators.required, Validators.min(1)]],
+
     });
+
   }
 
   agregarUsuario() {
+    this.usuario = this.formGroup.value;
+    console.log(this.usuario);
     this._usuarioService.post(this.usuario).subscribe(p => {
       if (p != null) {
         console.log(p + ' ha sido creado');

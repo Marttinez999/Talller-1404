@@ -25,3 +25,5 @@
 1.1.0 [BugFix] - "La app no traia datos"
 
 1.2.0 [Funcionalidad] - "Se agrego los modulos reactivos"
+
+1.2.1 [bugFix] - "Se corrigio la instanciacion de del formGroup en formulario.ts"

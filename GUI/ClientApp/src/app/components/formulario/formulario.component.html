@@ -1,19 +1,29 @@
 <div class="container fadeIn animated" style="max-width: 7cm; margin-top: 1cm;" [formGroup]="formGroup">
     <div class="form-group">
         <label for="formGroupExampleInput">Identificacion</label>
-        <input type="text" class="form-control" [formControlName]="identificacion" placeholder="Escribe tu identificacion" #identificacion>
+        <input type="text" class="form-control" [ngClass]="{'is-invalid':formGroup.get('id').hasError('required') && formGroup.get('id').touched,'is-valid': !formGroup.get('id').hasError('required') && formGroup.get('id').touched}" placeholder="Escribe tu identificacion"
+            formControlName="id">
+        <label class="text-danger" *ngIf="formGroup.get('id').hasError('required') && formGroup.get('id').touched">Id requerido!</label>
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Nombre</label>
-        <input type="text" class="form-control" [formControlName]="nombre" placeholder="Escribe tu nombre" #nombre>
+        <input type="text" class="form-control" [ngClass]="{'is-invalid':formGroup.get('nombre').hasError('required') && formGroup.get('nombre').touched,'is-valid': !formGroup.get('nombre').hasError('required') && formGroup.get('nombre').touched}" placeholder="Escribe tu nombre "
+            formControlName="nombre">
+        <label class="text-danger " *ngIf="formGroup.get( 'nombre').hasError( 'required') && formGroup.get( 'nombre').touched ">Nombre requerido!</label>
     </div>
-    <div class="form-group">
-        <label for="formGroupExampleInput2">Salario</label>
-        <input type="text" class="form-control" [formControlName]="salario" placeholder="Ingresa el salario" #salario>
+    <div class="form-group ">
+        <label for="formGroupExampleInput2 ">Salario</label>
+        <input type="text " class="form-control " [ngClass]="{'is-invalid':formGroup.get('salario').hasError('required') || formGroup.get('salario').hasError('min') && formGroup.get('salario').touched,'is-valid': !formGroup.get('salario').hasError('required') && !formGroup.get('salario').hasError('min') && formGroup.get('salario').touched}"
+            placeholder="Ingresa el salario " formControlName="salario">
+        <label class="text-danger" *ngIf="formGroup.get('salario').hasError('required') && formGroup.get('salario').touched">Salario requerido!</label>
+        <label class="text-danger" *ngIf="formGroup.get('salario').hasError('min') && formGroup.get('salario').touched">Debe ser mayor a cero!</label>
     </div>
-    <div class="form-group">
-        <label for="formGroupExampleInput2">Costo de servicio</label>
-        <input type="text" class="form-control" [formControlName]="costo" placeholder="Ingresa el costo" #costo>
+    <div class="form-group ">
+        <label for="formGroupExampleInput2 ">Costo de servicio</label>
+        <input [ngClass]="{'is-invalid':formGroup.get('costo').hasError('required') || formGroup.get('costo').hasError('min') && formGroup.get('costo').touched,'is-valid': !formGroup.get('costo').hasError('required') && !formGroup.get('costo').hasError('min') && formGroup.get('costo').touched}"
+            type="text " class="form-control " placeholder="Ingresa el costo " formControlName="costo">
+        <label class="text-danger" *ngIf="formGroup.get('costo').hasError('required') && formGroup.get('costo').touched">Valor requerido!</label>
+        <label class="text-danger" *ngIf="formGroup.get('costo').hasError('min') && formGroup.get('costo').touched">Debe ser mayor a cero!</label>
     </div>
-    <button (click)="onSubmit()" class="btn btn-outline-primary btn-block" [routerLink]="['/consulta']">Facturar</button>
+    <button (click)="onSubmit() " [disabled]="formGroup.invalid " class="btn btn-outline-primary btn-block " [routerLink]="[ '/consulta'] ">Facturar</button>
 </div>

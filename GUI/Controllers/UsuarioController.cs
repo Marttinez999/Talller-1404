@@ -58,8 +58,7 @@ namespace GUI.Controllers
           usuario.nombre = usuarioInput.nombre;
           usuario.salario = usuarioInput.salario;
           usuario.costo = usuarioInput.costo;
-
-          System.Console.WriteLine(usuario.nombre);
+          
           return usuario;
       }
     }
