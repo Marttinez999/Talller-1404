@@ -25,12 +25,15 @@ export class UsuarioService {
    get(): Observable<Usuario[]> {
       return this.http.get<Usuario[]>(this.baseUrl + 'api/Usuario').pipe(
          tap(_ => this.handleErrorService.log('datos resibidos')),
-         catchError(_ => this.handleErrorService.handleError<Usuario[]>('Consulta Usuario', null)));
+         catchError(this.handleErrorService.handleError<Usuario[]>('Consulta Usuario', null))
+      );
    }
 
    post(usuario: Usuario): Observable<Usuario> {
+      console.log(usuario);
       return this.http.post<Usuario>(this.baseUrl + 'api/Usuario', usuario).pipe(
          tap(_ => this.handleErrorService.log('datos enviados')),
-         catchError(_ => this.handleErrorService.handleError<Usuario>('Registrar Usuario', null)));
+         catchError(this.handleErrorService.handleError<Usuario>('Registrar Usuario', null))
+      );
    }
 }

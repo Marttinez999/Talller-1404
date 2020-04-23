@@ -12,18 +12,18 @@
         <label class="text-danger " *ngIf="formGroup.get( 'nombre').hasError( 'required') && formGroup.get( 'nombre').touched ">Nombre requerido!</label>
     </div>
     <div class="form-group ">
-        <label for="formGroupExampleInput2 ">Salario</label>
-        <input type="text " class="form-control " [ngClass]="{'is-invalid':formGroup.get('salario').hasError('required') || formGroup.get('salario').hasError('min') && formGroup.get('salario').touched,'is-valid': !formGroup.get('salario').hasError('required') && !formGroup.get('salario').hasError('min') && formGroup.get('salario').touched}"
-            placeholder="Ingresa el salario " formControlName="salario">
+        <label for="formGroupExampleInput2">Salario</label>
+        <input type="number" class="form-control" [ngClass]="{'is-invalid':formGroup.get('salario').hasError('required') || formGroup.get('salario').hasError('min') && formGroup.get('salario').touched,'is-valid': !formGroup.get('salario').hasError('required') && !formGroup.get('salario').hasError('min') && formGroup.get('salario').touched}"
+            placeholder="Ingresa el salario" formControlName="salario">
         <label class="text-danger" *ngIf="formGroup.get('salario').hasError('required') && formGroup.get('salario').touched">Salario requerido!</label>
         <label class="text-danger" *ngIf="formGroup.get('salario').hasError('min') && formGroup.get('salario').touched">Debe ser mayor a cero!</label>
     </div>
     <div class="form-group ">
         <label for="formGroupExampleInput2 ">Costo de servicio</label>
         <input [ngClass]="{'is-invalid':formGroup.get('costo').hasError('required') || formGroup.get('costo').hasError('min') && formGroup.get('costo').touched,'is-valid': !formGroup.get('costo').hasError('required') && !formGroup.get('costo').hasError('min') && formGroup.get('costo').touched}"
-            type="text " class="form-control " placeholder="Ingresa el costo " formControlName="costo">
+            type="number" class="form-control " placeholder="Ingresa el costo " formControlName="costo">
         <label class="text-danger" *ngIf="formGroup.get('costo').hasError('required') && formGroup.get('costo').touched">Valor requerido!</label>
         <label class="text-danger" *ngIf="formGroup.get('costo').hasError('min') && formGroup.get('costo').touched">Debe ser mayor a cero!</label>
     </div>
-    <button (click)="onSubmit() " [disabled]="formGroup.invalid " class="btn btn-outline-primary btn-block " [routerLink]="[ '/consulta'] ">Facturar</button>
+    <button (click)="onSubmit() " [disabled]="formGroup.invalid " class="btn btn-outline-primary btn-block ">Facturar</button>
 </div>

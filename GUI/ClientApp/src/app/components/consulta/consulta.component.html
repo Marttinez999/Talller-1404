@@ -15,9 +15,9 @@
                 <th scope="row">{{ i+1 }}</th>
                 <td>{{ usuario.identificacion }}</td>
                 <td>{{ usuario.nombre }}</td>
-                <td>{{ usuario.salario }}</td>
-                <td>{{ usuario.costo }}</td>
-                <td>{{ usuario.copago }}</td>
+                <td>{{ usuario.salario | currency }}</td>
+                <td>{{ usuario.costo | currency }}</td>
+                <td>{{ usuario.copago | currency }}</td>
             </tr>
         </tbody>
     </table>

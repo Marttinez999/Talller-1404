@@ -18,6 +18,7 @@ namespace Datos
     public void Guardar(Usuario usuario) {
         using (var comando = _conexion.CreateCommand())
         {
+            System.Console.WriteLine(usuario.identificacion);
             comando.CommandText = @"insert into usuarios (usuario_id, nombre, salario, costo_servicio, copago)
                                     values (@usuario_id, @nombre, @salario, @costo_servicio, @copago)";
             comando.Parameters.AddWithValue("@usuario_id",usuario.identificacion);

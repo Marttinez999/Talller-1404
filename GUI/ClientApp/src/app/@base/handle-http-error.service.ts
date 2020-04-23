@@ -2,21 +2,20 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
-   providedIn: 'root'
+  providedIn: 'root'
 })
-
 export class HandleHttpErrorService {
 
-   constructor() {}
+  constructor() { }
 
-   public handleError<T>(operation = 'operation', result?: T) {
-       return (error: any): Observable<T> => {
-           console.error(error);
-           return of(result as T);
-       };
-   }
+  public handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of(result as T);
+    };
+  }
+  public log(message: string) {
+    console.log(message);
+  }
 
-    public log(mensaje: string) {
-        console.log(mensaje);
-    }
 }

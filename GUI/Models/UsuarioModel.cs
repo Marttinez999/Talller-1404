@@ -14,8 +14,8 @@ namespace GUI.Models
         {}
         public UsuarioViewModel(Usuario usuario)
         {
-
             identificacion = usuario.identificacion;
+            System.Console.WriteLine(identificacion);
             nombre = usuario.nombre;
             salario = usuario.salario;
             costo = usuario.costo;

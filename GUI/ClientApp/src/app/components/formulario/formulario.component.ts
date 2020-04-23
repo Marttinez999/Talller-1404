@@ -39,16 +39,16 @@ export class FormularioComponent implements OnInit {
 
   agregarUsuario() {
     this.usuario = this.formGroup.value;
-    console.log(this.usuario);
     this._usuarioService.post(this.usuario).subscribe(p => {
       if (p != null) {
-        console.log(p + ' ha sido creado');
-        this.usuario = p;
+        p = this.usuario;
+        alert(p.nombre + ' ha sido creado');
       }
     });
   }
   onSubmit() {
-    if (!this.formGroup.invalid) {
+    if (this.formGroup.invalid) {
+    } else {
       this.agregarUsuario();
     }
   }

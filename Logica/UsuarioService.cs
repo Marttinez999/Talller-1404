@@ -27,7 +27,6 @@ namespace Logica
             try
             {
                 usuario.calcularCopago();
-                System.Console.WriteLine(usuario.identificacion);
                 _conexion.open();
                 usuarioRepository.Guardar(usuario);
                 _conexion.close();
