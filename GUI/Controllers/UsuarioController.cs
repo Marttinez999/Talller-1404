@@ -44,11 +44,11 @@ namespace GUI.Controllers
       private Usuario mapearUsuario(UsuarioInputModel usuarioInput){
           Usuario usuario = new Usuario();
         //   System.Console.WriteLine(usuarioInput.identificacion);
-          usuario.identificacion = usuarioInput.identificacion;
+          usuario.Identificacion = usuarioInput.identificacion;
         //   System.Console.WriteLine(usuario.identificacion);
-          usuario.nombre = usuarioInput.nombre;
-          usuario.salario = usuarioInput.salario;
-          usuario.costo = usuarioInput.costo;
+          usuario.Nombre = usuarioInput.nombre;
+          usuario.Salario = usuarioInput.salario;
+          usuario.Costo = usuarioInput.costo;
           
           return usuario;
       }

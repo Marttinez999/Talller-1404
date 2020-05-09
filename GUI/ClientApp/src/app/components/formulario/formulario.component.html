@@ -1,9 +1,9 @@
 <div class="container fadeIn animated" style="max-width: 7cm; margin-top: 1cm;" [formGroup]="formGroup">
     <div class="form-group">
         <label for="formGroupExampleInput">Identificacion</label>
-        <input type="text" class="form-control" [ngClass]="{'is-invalid':formGroup.get('id').hasError('required') && formGroup.get('id').touched,'is-valid': !formGroup.get('id').hasError('required') && formGroup.get('id').touched}" placeholder="Escribe tu identificacion"
-            formControlName="id">
-        <label class="text-danger" *ngIf="formGroup.get('id').hasError('required') && formGroup.get('id').touched">Id requerido!</label>
+        <input type="text" class="form-control" [ngClass]="{'is-invalid':formGroup.get('identificacion').hasError('required') && formGroup.get('identificacion').touched,'is-valid': !formGroup.get('identificacion').hasError('required') && formGroup.get('identificacion').touched}" placeholder="Escribe tu identificacion"
+            formControlName="identificacion">
+        <label class="text-danger" *ngIf="formGroup.get('identificacion').hasError('required') && formGroup.get('identificacion').touched">Id requerido!</label>
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Nombre</label>
@@ -25,5 +25,5 @@
         <label class="text-danger" *ngIf="formGroup.get('costo').hasError('required') && formGroup.get('costo').touched">Valor requerido!</label>
         <label class="text-danger" *ngIf="formGroup.get('costo').hasError('min') && formGroup.get('costo').touched">Debe ser mayor a cero!</label>
     </div>
-    <button (click)="onSubmit() " [disabled]="formGroup.invalid " class="btn btn-outline-primary btn-block ">Facturar</button>
+    <button (click)="agregarUsuario()" [disabled]="formGroup.invalid " class="btn btn-outline-primary btn-block ">Facturar</button>
 </div>

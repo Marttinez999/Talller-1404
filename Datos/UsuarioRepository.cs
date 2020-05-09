@@ -18,14 +18,13 @@ namespace Datos
     public void Guardar(Usuario usuario) {
         using (var comando = _conexion.CreateCommand())
         {
-            System.Console.WriteLine(usuario.identificacion);
             comando.CommandText = @"insert into usuarios (usuario_id, nombre, salario, costo_servicio, copago)
                                     values (@usuario_id, @nombre, @salario, @costo_servicio, @copago)";
-            comando.Parameters.AddWithValue("@usuario_id",usuario.identificacion);
-            comando.Parameters.AddWithValue("@nombre",usuario.nombre);
-            comando.Parameters.AddWithValue("@salario",usuario.salario);
-            comando.Parameters.AddWithValue("@costo_servicio",usuario.costo);
-            comando.Parameters.AddWithValue("@copago",usuario.copago);
+            comando.Parameters.AddWithValue("@usuario_id",usuario.Identificacion);
+            comando.Parameters.AddWithValue("@nombre",usuario.Nombre);
+            comando.Parameters.AddWithValue("@salario",usuario.Salario);
+            comando.Parameters.AddWithValue("@costo_servicio",usuario.Costo);
+            comando.Parameters.AddWithValue("@copago",usuario.Copago);
 
             var filas = comando.ExecuteNonQuery();
         }
@@ -52,11 +51,11 @@ namespace Datos
     public Usuario mapearUsuario(SqlDataReader datos) {
         if (!datos.HasRows) return null;
         Usuario usuario = new Usuario();
-        usuario.identificacion = (string)datos["usuario_id"];
-        usuario.nombre = (string)datos["nombre"];
-        usuario.salario = (double)datos["salario"];
-        usuario.costo = (double)datos["costo_servicio"];
-        usuario.copago = (double)datos["copago"];
+        usuario.Identificacion = (string)datos["usuario_id"];
+        usuario.Nombre = (string)datos["nombre"];
+        usuario.Salario = (double)datos["salario"];
+        usuario.Costo = (double)datos["costo_servicio"];
+        usuario.Copago = (double)datos["copago"];
 
         return usuario;
     }

@@ -28,10 +28,10 @@ export class FormularioComponent implements OnInit {
 
     this.formGroup = this.formBuilder.group({
 
-      id: ['', Validators.required],
-      nombre: ['', Validators.required],
-      salario: [0, [Validators.required, Validators.min(1)]],
-      costo: [0, [Validators.required, Validators.min(1)]],
+      identificacion: [, Validators.required],
+      nombre: [, Validators.required],
+      salario: [, [Validators.required, Validators.min(1)]],
+      costo: [, [Validators.required, Validators.min(1)]],
 
     });
 
@@ -46,10 +46,5 @@ export class FormularioComponent implements OnInit {
       }
     });
   }
-  onSubmit() {
-    if (this.formGroup.invalid) {
-    } else {
-      this.agregarUsuario();
-    }
-  }
+
 }
